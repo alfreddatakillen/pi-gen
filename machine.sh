@@ -14,7 +14,7 @@ fi
 
 IMG_NAME="machine" \
 	USE_QCOW2="1" \
-	RELEASE="bullseye" \
+	RELEASE="buster" \
 	TARGET_HOSTNAME="machine" \
 	FIRST_USER_NAME="user" \
 	FIRST_USER_PASS="password" \
