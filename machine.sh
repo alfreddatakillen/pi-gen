@@ -21,6 +21,7 @@ IMG_NAME="machine" \
 	PUBKEY_SSH_FIRST_USER="$(cat /home/user/.ssh/id_rsa.pub)" \
 	ENABLE_SSH="1" \
 	PUBKEY_ONLY_SSH="1" \
+	STAGE_LIST="stage0 stage1 stage2 stage6" \
 	\
 	./build.sh
 
