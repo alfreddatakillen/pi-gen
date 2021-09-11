@@ -7,11 +7,6 @@ if [[ "$(whoami)" != "root" ]]; then
 	exit 1
 fi
 
-if [ ! -e work ]; then
-	mkdir work
-	mount -t tmpfs -o size=20G tmpfs work
-fi
-
 IMG_NAME="machine" \
 	USE_QCOW2="1" \
 	RELEASE="buster" \
