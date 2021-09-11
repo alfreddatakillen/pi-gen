@@ -1,0 +1,11 @@
+[Unit]
+Description=Enable Overlay Filesystem
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/enable_overlayfs.sh
+
+[Install]
+WantedBy=enable-overlayfs.target
+
