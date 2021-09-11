@@ -10,8 +10,8 @@ systemctl enable docker
 usermod -aG docker user
 
 # docker-compose:
-apt-get install libffi-dev libssl-dev
-apt install python3-dev
+apt-get install -y libffi-dev libssl-dev
+apt install -y python3-dev
 apt-get install -y python3 python3-pip
 pip3 install docker-compose
 
