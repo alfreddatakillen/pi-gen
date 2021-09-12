@@ -1,5 +1,5 @@
 #!/bin/bash
 
 # Trying to fix broken install
-apt remote qemu-user-static
-apt install
+apt remove -y qemu-user-static
+apt install -y qemu-user-static
