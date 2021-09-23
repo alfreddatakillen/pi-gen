@@ -6,7 +6,7 @@ interface eth1
 static ip_address=192.168.99.1/24
 _EOF_
 
-mkdir -p /opt/tftp/netboot
+mkdir -p "${ROOTFS_DIR}"/opt/tftp/netboot
 
 cat <<_EOF_ >"${ROOTFS_DIR}"/etc/dnsmasq.d/machine
 # Logging
