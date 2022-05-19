@@ -1,3 +1,34 @@
+# my pi-gen
+
+Make the work directory into a ram drive, to increase build speed:
+
+```
+$ rm -Rf work
+$ mkdir work
+$ sudo mount -t tmpfs -o rw,size=20G tmpfs work
+```
+
+To build image:
+
+```
+$ sudo ./machine.sh
+```
+
+Image will be written to:
+`work/xxxx-xx-xx-machine/export-images/xxxx-xx-xx-machine-full.img`
+
+Write the image to USB:
+
+```
+$ sudo dd if=xxxx-xx-xx-machine-full.img of=/dev/sdX bs=1M status=progress
+$ sync
+```
+
+First time you boot, the filesystem will be set into read-only mode and
+then reboot. After that first reboot, the system will always mount read-only
+already at boot.
+
+
 # pi-gen
 
 Tool used to create Raspberry Pi OS images. (Previously known as Raspbian).
